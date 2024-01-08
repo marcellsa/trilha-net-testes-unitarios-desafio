@@ -51,6 +51,7 @@ public class ValidacoesListaTests
     }
 
     //TODO: Corrigir a anotação [Fact]
+    [Fact]
     public void DeveMultiplicarOsElementosDaListaPor2()
     {
         //TODO: Implementar método de teste
@@ -58,10 +59,13 @@ public class ValidacoesListaTests
         // Arrange
         var lista = new List<int> { 5, 7, 8, 9 };
         var resultadoEsperado = new List<int> { 10, 14, 16, 18 };
+        var numeroParaMultiplicar = 2;
         
         // Act
+        var resultado = _validacoes.MultiplicarNumerosLista(lista, numeroParaMultiplicar);
 
         // Assert
+        Assert.Equal(resultadoEsperado, resultado);
     }
 
     [Fact]
